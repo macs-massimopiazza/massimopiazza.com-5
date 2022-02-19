@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massimo Piazza</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
 </head>
 <body>
     <div class="container">
         <header id="header">
             <div class="switch-wrapper">
-                <span>chiaro</span>
-                <div class="switch-container">
+                <!-- <span>chiaro</span> -->
+                <div id="switch-container">
                     <div class="switch-circle"></div>
                 </div>
-                <span>scuro</span>
+                <!-- <span>scuro</span> -->
             </div>
             <nav>
                 <ul class="links">
@@ -26,23 +27,140 @@
                         <span>contatti :)</span>
                         <div id="contact-modal">
                             <p>email:</p>
-                            <a href="#" class="email">me@massimopiazza.com</a>
+                            <a href="mailto:me@massimopiazza.com" class="email">me@massimopiazza.com</a>
                             <div class="row">
-                                <a href="#">linkedin</a>
-                                <a href="#">github</a>
+                                <a href="https://www.linkedin.com/in/-massimo-piazza">linkedin</a>
+                                <a href="https://github.com/macs-massimopiazza">github</a>
                             </div>
                         </div>
                     </li>
                 </ul>
             </nav>
             <div class="time-wrapper">
-                <span id="time">19:44</span>
+                <div id="time"><span id="hours" class="blink"></span>:<span id="minutes" class="blink"></span></div>
             </div>
         </header>
         <main>
-            <section id="about" class="active">about</section>
-            <section id="doing-now">doing-now</section>
-            <section id="done">done</section>
+            <section id="about" class="active">
+                <div class="row">
+                    <div class="about-img">
+                        <img class="stickman" src="img/foto-sinistra.png">
+                        <img class="real" src="img/foto-clooney.svg">
+                        <div class="caption">
+                            <small>mia rappresentazione abbastanza fedele</small>
+                            <small>scherzone, passa sulla foto col mouse per vedermi</small>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <ul>
+                            <span class="title">cartà d'identità ufficiale con validità giuridica</span>
+                            <li>massimo piazza</li>
+                            <li>23 anni</li>
+                            <li>vivo a verooona</li>
+                            <li>professione indefinita, qualcosa riguardo la programmazione</li>
+                            <li>scio, suono la batteria, vado in moto (e lavoro hihi)</li>
+                            <li><a href="#">clicca qui, scarica il mio cv</a>(eheh ho fatto la rima)</li>
+                            <li>ho finito le cose da dire</li>
+                            <li>questa lista deve essere più lunga</li>
+                            <li>ancora un punto</li>
+                            <li>ecco qui</li>
+                            <li class="dog-trigger">
+                                <span>guarda questo</span>
+                                <div class="modal-dog">
+                                    <img src="https://c.tenor.com/wMDO2ceyGOYAAAAd/dog-sad.gif">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="doing-now">
+                <div class="row">
+                    <div class="wrapper">
+                        <div class="left">
+                            <span class="title">lavoro veeeroo</span>
+                            <ul>
+                                <li>tutor presso <a href="https://boolean.careers" target="blank">boolean careers</a></li>
+                                <li>da dicembre 2021</li>
+                                <li>correggo esercizi degli studenti</li>
+                                <li>li aiuto quando hanno problemini</li>
+                                <span class="spacer"></span>
+                                <li>sviluppatore web freelance</li>
+                                <li>da novembre 2019</li>
+                                <li>faccio sitini per chi ne ha bisogno</li>
+                                <li>senza una stack specifica</li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <span class="title">progettini</span>
+                            <ul>
+                                <span class="tag">(personali)</span>
+                                <li><a href="https://www.uipath.com">uipath rpa development</a> </li>
+                                <li>faccio robottini che fanno</li>
+                                <li>cose noiose</li>
+                                <span class="spacer"></span>
+                                <li><a href="https://www.redbubble.com/people/art-disclosure/shop">the art disclosure</a></li>
+                                <li>gestione negozio che offre</li>
+                                <li>merchandise per quadri bellini</li>
+                                <span class="spacer"></span>
+                                <span class="tag">(in team)</span>
+                                <li>arrivano presto eheh</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="done">
+                <div class="row">
+                    <div class="wrapper">
+                        <div class="left">
+                            <span class="title">esperienze lavorative</span>
+                            <ul>
+                                <li>sviluppatore wordpress</li>
+                                <li>presso <a href="https://www.flyingweb.ie" target="blank">flying web solutions</a></li>
+                                <li>4 mesi (2021)</li>
+                                <span class="spacer"></span>
+                                <li>sviluppatore rpa</li>
+                                <li>presso <a href="https://www.arag.it" target="blank">arag se</a></li>
+                                <li>3 mesi (2021)</li>
+                                <span class="spacer"></span>
+                                <li>sviluppatore fullstack</li>
+                                <li>presso <a href="https://www.webmotion.it" target="blank">webmotion</a></li>
+                                <li>4 mesi (2022)</li>
+                                <span class="spacer"></span>
+                                <li>sviluppatore vba excel</li>
+                                <li>presso <a href="https://www.arag.it" target="blank">arag se</a></li>
+                                <li>8 mesi (2017)</li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <span class="title">progettini passati</span>
+                            <ul>
+                                <span class="tag">(in team)</span>
+                                <li><a href="#" target="blank">eventshare</a> </li>
+                                <li><a href="#" target="blank">progettino ux</a></li>
+                                <span class="spacer"></span>
+                                <span class="tag">(personali) - (fatti tanto tempo fa hihi)</span>
+                                <li><a href="#" target="blank">mio vecchio sito</a></li>
+                                <li><a href="#" target="blank">coronadatah</a></li>
+                                <li><a href="#" target="blank">reddit scraper</a></li>
+                                <li><a href="#" target="blank">videini stupidini</a></li>
+                            </ul>
+                            <span class="title" style="margin-top: 20px;">dove ho studiato</span>
+                            <ul>
+                                <li>user experience specialist</li>
+                                <li>presso <a href="https://itslogistica.it" target="blank">its last verona</a> </li>
+                                <li>web development, ux ui design, project managment</li>
+                                <li>2019 - 2021</li>
+                                <span class="spacer"></span>
+                                <li>ragioneria, sistemi informativi aziendali</li>
+                                <li>presso <a href="https://www.copernicopasoli.edu.it" target="blank" >iiss copernico pasoli</a> </li>
+                                <li>2013 - 2018</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
             <div class="footer-wrapper">

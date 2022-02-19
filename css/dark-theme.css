@@ -1,0 +1,33 @@
+body.dark {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+/* switch */
+body.dark #switch-container, body.dark .switch-circle{
+    border: 1px solid var(--color-light);
+}
+
+body.dark .switch-circle {
+    left: 78%;
+}
+
+/* links and other text decoration*/
+body.dark a, body.dark .about-text ul li:last-child > span {
+    border-bottom: 1px solid var(--color-lightish);
+    color: var(--color-lightish);
+}
+
+body.dark ul.links li.active span:before {
+    background-color: var(--color-light);
+}
+
+body.dark ul.links li > span {
+    border-right: 1px solid var(--color-light);
+}
+
+/* contact modal */
+body.dark #contact-modal {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-light);
+}

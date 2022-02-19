@@ -4,6 +4,7 @@
 :root {
     /* light theme */
     --color-light: #fdfdfd;
+    --color-lightish: #e9e9e9;
     --color-dark: #707070;
 }
 
@@ -17,7 +18,11 @@
 body {
     font-family: 'Courier New', arial;
     background-color: var(--color-light);
+    webkit-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;	
 }
+
 
 a {
     text-decoration: none;
@@ -50,13 +55,17 @@ header {
     display: flex;
 }
 
-.switch-container {
+#switch-container {
     width: 45px;
     height: 20px;
     margin: 0 10px;
     border: 1px solid var(--color-dark);
     border-radius: 9999px;
     position: relative;
+}
+
+#switch-container:hover {
+    cursor: pointer;
 }
 
 .switch-circle {
@@ -68,6 +77,7 @@ header {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 25%;
+    transition: 0.2s left ease-out;
 }
 
 /* navbar */
@@ -109,6 +119,7 @@ ul.links li#link-contact {
     left: -25%;
     z-index: 9999;
     background-color: var(--color-light);
+    cursor: initial;
 }
 
 #contact-modal .row{
@@ -144,13 +155,32 @@ ul.links li:last-child > span {
     border-right: none;
 }
 
+/* current time */
+.blink {
+    animation: blink-animation 6s steps(11, start) infinite;
+    -webkit-animation: blink-animation 6s steps(11, start) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
+
 /* show main-content */
 #about { display: none; }
 #doing-now { display: none; }
 #done { display: none; }
 #contact-modal { display: none; }
 
-section.active { display: block !important; }
+#about.active { display: flex; }
+#doing-now.active { display: block; }
+#done.active { display: block; }
+
 div.active { display: block !important; }
 
 #link-contact:hover #contact-modal {
@@ -162,6 +192,207 @@ div.active { display: block !important; }
 main {
     width: 100%;
     height: calc(100vh - 90px); /* 60px header - 30px footer*/
+}
+
+/* container doing e done*/
+#doing-now .wrapper, #done .wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* About */
+#about {
+    height: 85%;
+    justify-content: center;
+}
+
+#about .about-img {
+    position: relative;
+}
+
+#about .about-img img.real {
+    display: none;
+}
+
+#about .about-img img.stickman {
+    display: block;
+}
+
+#about .about-img:hover img.real {
+    display: block;
+}
+
+#about .about-img:hover img.stickman {
+    display: none;
+}
+
+#about .about-img img {
+    width: 280px;
+}
+
+#about .about-img .caption {
+    position: absolute;
+    bottom: -45px;
+    font-size: 13px;
+}
+
+#about .about-img .caption > small {
+    display: block;
+}
+
+#about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about .title {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.about-text {
+    padding-left: 60px;
+}
+
+.about-text ul {
+    list-style-type: none;
+}
+
+.about-text ul li {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 8px;
+}
+
+.about-text ul li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+}
+
+.about-text ul li:last-child {
+    position: relative;
+    max-width: fit-content;
+}
+
+.about-text ul li:last-child > span {
+    border-bottom: 1px solid var(--color-dark);
+    color: var(--color-dark);
+}
+
+.about-text ul li:last-child > span:hover {
+    cursor: pointer;
+}
+
+.about-text ul li:last-child:hover .modal-dog {
+    display: block;
+}
+
+.modal-dog {
+    position: absolute;
+    top: 30px;
+    display: none;
+}
+
+
+/*Doing Now*/
+#doing-now {
+    height: 85%;
+    justify-content: center;
+}
+
+#doing-now .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#doing-now .title {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#doing-now .row .left {
+    padding-right: 80px;
+}
+
+#doing-now .right .tag {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#doing-now .row > div ul {
+    list-style-type: none;
+}
+
+#doing-now .row > div ul li {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 8px;
+}
+
+#doing-now .row > div ul li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+}
+
+#doing-now .spacer {
+    display: block;
+    height: 20px;
+}
+
+/*Doing Now*/
+#done {
+    height: 85%;
+    justify-content: center;
+}
+
+#done .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#done .title {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#done .row .left {
+    padding-right: 80px;
+}
+
+#done .right .tag {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#done .row > div ul {
+    list-style-type: none;
+}
+
+#done .row > div ul li {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 8px;
+}
+
+#done .row > div ul li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+}
+
+#done .spacer {
+    display: block;
+    height: 20px;
 }
 
 /* Footer */
