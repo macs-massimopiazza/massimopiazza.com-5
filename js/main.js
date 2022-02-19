@@ -42,13 +42,19 @@ linkDone.addEventListener("click", function() {
 const switchElement = document.getElementById("switch-container");
 const bodyElement = document.getElementsByTagName("body")[0];
 const stickmanImg = document.getElementsByClassName("stickman")[0];
+const starOne = document.getElementsByClassName("star-1")[0];
+const starTwo = document.getElementsByClassName("star-2")[0];
 
 switchElement.addEventListener("click", function() { 
     bodyElement.classList.toggle("dark");
     if(bodyElement.classList[0] == "dark") {
         stickmanImg.src="img/foto-sinistra-dark.png"
+        starOne.src="img/star-dark-1.svg"
+        starTwo.src="img/star-dark-2.svg"
     } else {
         stickmanImg.src="img/foto-sinistra.png"
+        starOne.src="img/star-light-1.svg"
+        starTwo.src="img/star-light-2.svg"
     }
     if(localStorage.getItem("dark-theme") == "false") {
         localStorage.setItem("dark-theme", "true");
@@ -64,6 +70,9 @@ if (localStorage.getItem("dark-theme") == null) {
 if (localStorage.getItem("dark-theme") == "true") {
     console.log("cambio a dark se variaile ok")
     bodyElement.classList.add("dark");
+    stickmanImg.src="img/foto-sinistra-dark.png"
+    starOne.src="img/star-dark-1.svg"
+    starTwo.src="img/star-dark-2.svg"
 }
 
 //get time

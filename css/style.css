@@ -172,9 +172,9 @@ ul.links li:last-child > span {
 }
 
 /* show main-content */
-#about { display: none; }
-#doing-now { display: none; }
-#done { display: none; }
+#about { display: none; padding-left: 120px}
+#doing-now { display: none; padding-left: 120px}
+#done { display: none; padding-left: 220px}
 #contact-modal { display: none; }
 
 #about.active { display: flex; }
@@ -191,7 +191,7 @@ div.active { display: block !important; }
 /* Main */
 main {
     width: 100%;
-    height: calc(100vh - 90px); /* 60px header - 30px footer*/
+    height: calc(100vh - 100px); /* 60px header - 40px footer*/
 }
 
 /* container doing e done*/
@@ -397,7 +397,7 @@ main {
 
 /* Footer */
 footer {
-    height: 30px;
+    height: 40px;
     width: 100%;
 }
 
@@ -407,4 +407,21 @@ footer {
     justify-content: space-between;
 }
 
+/* background stars */
+.container {
+    position: relative;
+}
 
+.star-1, .star-2 {
+    position: absolute;
+}
+
+.star-1 {
+    top: 70%;
+    left: 10%;
+}
+
+.star-2 {
+    top: 10%;
+    right: 5%;
+}
