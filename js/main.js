@@ -208,7 +208,6 @@ let currentYear = dateElement.getFullYear();
 let currentMonth = dateElement.getMonth();
 let currentDate = dateElement.getDate();
 let age
-console.log(currentYear, currentMonth, currentDate);
 
 if(currentDate < 24 && currentMonth < 9) {
     age = (currentYear - 1999) - 1;
