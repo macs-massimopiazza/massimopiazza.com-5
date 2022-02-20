@@ -4,6 +4,10 @@ const linkDoingNow = document.getElementById("link-doing-now");
 const linkDone = document.getElementById("link-done");
 const linkContact = document.getElementById("link-contact");
 
+const sideLinkAbout = document.getElementById("side-link-about");
+const sideLinkDoingNow = document.getElementById("side-link-doing-now");
+const sideLinkDone = document.getElementById("side-link-done");
+
 const aboutSection = document.getElementById("about");
 const doingNowSection = document.getElementById("doing-now");
 const doneSection = document.getElementById("done");
@@ -11,31 +15,34 @@ const doneSection = document.getElementById("done");
 const container = document.getElementsByClassName("container")[0]
 
 linkAbout.addEventListener("click", function() {
-    currentActive = document.querySelectorAll("ul.links > .active, section.active, div.active");
+    currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
     }
     linkAbout.classList.add("active");
+    sideLinkAbout.classList.add("active");
     aboutSection.classList.add("active");
     localStorage.setItem("current-page", "about");
 });
 
 linkDoingNow.addEventListener("click", function() {
-    currentActive = document.querySelectorAll("ul.links > .active, section.active, div.active");
+    currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
     }
     linkDoingNow.classList.add("active");
+    sideLinkDoingNow.classList.add("active");
     doingNowSection.classList.add("active")
     localStorage.setItem("current-page", "doing-now");
 });
 
 linkDone.addEventListener("click", function() {
-    currentActive = document.querySelectorAll("ul.links > .active, section.active, div.active");
+    currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
     }
     linkDone.classList.add("active");
+    sideLinkDone.classList.add("active");
     doneSection.classList.add("active");
     localStorage.setItem("current-page", "done");
 });
@@ -69,13 +76,14 @@ switchElement.addEventListener("click", function() {
 if (localStorage.getItem("current-page") == null) {
     localStorage.setItem("current-page", "")
 }
-let currentActive = document.querySelectorAll("ul.links > .active, section.active, div.active");
+let currentActive = document.querySelectorAll("li.active, div.active, section.active")
 switch(localStorage.getItem("current-page")){
     case "about":
         for(let i = 0; i < currentActive.length; i++) {
             currentActive[i].classList.remove("active")
         }
         linkAbout.classList.add("active");
+        sideLinkAbout.classList.add("active");   
         aboutSection.classList.add("active");
         localStorage.setItem("current-page", "about");
     break;
@@ -84,6 +92,7 @@ switch(localStorage.getItem("current-page")){
             currentActive[i].classList.remove("active")
         }
         linkDoingNow.classList.add("active");
+        sideLinkDoingNow.classList.add("active");   
         doingNowSection.classList.add("active")
         localStorage.setItem("current-page", "doing-now");
     break;
@@ -92,6 +101,7 @@ switch(localStorage.getItem("current-page")){
             currentActive[i].classList.remove("active")
         }
         linkDone.classList.add("active");
+        sideLinkDone.classList.add("active");   
         doneSection.classList.add("active");
         localStorage.setItem("current-page", "done");
     break;
@@ -148,4 +158,43 @@ overlayElement.addEventListener("click", function(){
 hamburgerMenu.addEventListener("click", function(){
     overlayElement.style.display = "block"
     sideMenu.style.transform = "translateX(0)"
+});
+
+sideLinkAbout.addEventListener("click", function() {
+    currentActive = document.querySelectorAll("li.active, div.active, section.active")
+    for(let i = 0; i < currentActive.length; i++) {
+        currentActive[i].classList.remove("active")
+    }
+    linkAbout.classList.add("active");
+    sideLinkAbout.classList.add("active");    
+    aboutSection.classList.add("active");
+    localStorage.setItem("current-page", "about");
+    overlayElement.style.display = "none"
+    sideMenu.style.transform = "translateX(-110%)"
+});
+
+sideLinkDoingNow.addEventListener("click", function() {
+    currentActive = document.querySelectorAll("li.active, div.active, section.active")
+    for(let i = 0; i < currentActive.length; i++) {
+        currentActive[i].classList.remove("active")
+    }
+    linkDoingNow.classList.add("active");
+    sideLinkDoingNow.classList.add("active");
+    doingNowSection.classList.add("active")
+    localStorage.setItem("current-page", "doing-now");
+    overlayElement.style.display = "none"
+    sideMenu.style.transform = "translateX(-110%)"
+});
+
+sideLinkDone.addEventListener("click", function() {
+    currentActive = document.querySelectorAll("li.active, div.active, section.active")
+    for(let i = 0; i < currentActive.length; i++) {
+        currentActive[i].classList.remove("active")
+    }
+    linkDone.classList.add("active");
+    sideLinkDone.classList.add("active");
+    doneSection.classList.add("active");
+    localStorage.setItem("current-page", "done");
+    overlayElement.style.display = "none"
+    sideMenu.style.transform = "translateX(-110%)"
 });

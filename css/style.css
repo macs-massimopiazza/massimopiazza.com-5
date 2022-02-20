@@ -513,7 +513,6 @@ footer {
 
 .container .sidemenu ul {
     list-style-type: none;
-    margin-bottom: 25px;
 }
 
 .container .sidemenu ul li{
@@ -523,6 +522,9 @@ footer {
 
 .container .sidemenu .contacts{
     padding-right: 30px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-dark);
 }
 
 .sidemenu #side-close {
