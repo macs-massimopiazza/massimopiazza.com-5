@@ -18,9 +18,8 @@
 body {
     font-family: 'Courier New', arial;
     background-color: var(--color-light);
-    webkit-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out;	
+    transition: background-color 0.2s ease-out;
 }
 
 
@@ -85,6 +84,10 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
+}
+
+nav #side-menu-toggle{
+    display: none;
 }
 
 ul.links {
@@ -210,20 +213,23 @@ main {
     position: relative;
 }
 
-#about .about-img img.real {
-    display: none;
+#about .about-img .real-wrapper {
+    position: absolute;
+    /* opacity: 0; */
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    height: 0px;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
 }
 
 #about .about-img img.stickman {
     display: block;
 }
 
-#about .about-img:hover img.real {
-    display: block;
-}
-
-#about .about-img:hover img.stickman {
-    display: none;
+#about .about-img .img-wrapper:hover .real-wrapper {
+    height: 100%;
 }
 
 #about .about-img img {
@@ -287,13 +293,16 @@ main {
 }
 
 .about-text ul li:last-child:hover .modal-dog {
-    display: block;
+    opacity: 1;
+    pointer-events: all;
 }
 
 .modal-dog {
     position: absolute;
-    top: 30px;
-    display: none;
+    top: 25px;
+    opacity: 0;
+    transition: all 0.5s;
+    pointer-events:none;
 }
 
 
@@ -407,6 +416,15 @@ footer {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 1300px) {
+    .footer-disclaimer {
+        display: none;
+    }
+    .footer-wrapper {
+        justify-content: flex-end;
+    }
+}
+
 /* background stars */
 .container {
     position: relative;
@@ -419,9 +437,30 @@ footer {
 .star-1 {
     top: 70%;
     left: 10%;
+    transition: all 1s;
+}
+
+.star-1:hover {
+    animation: star-winkle 0.3s;
 }
 
 .star-2 {
     top: 10%;
     right: 5%;
 }
+
+.star-2:hover {
+    animation: star-winkle 0.3s;
+}
+
+@keyframes star-winkle {
+    20% {
+        transform: rotate(-6deg);
+    }
+    55% {
+        transform: rotate(6deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+  }

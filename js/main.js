@@ -12,30 +12,33 @@ const contactModal = document.getElementById("contact-modal");
 const container = document.getElementsByClassName("container")[0]
 
 linkAbout.addEventListener("click", function() {
-    const currentActive = document.querySelectorAll("ul.links > .active, section.active, div.active");
+    currentActive = document.querySelectorAll("ul.links > .active, section.active, div.active");
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
     }
     linkAbout.classList.add("active");
-    aboutSection.classList.add("active")
+    aboutSection.classList.add("active");
+    localStorage.setItem("current-page", "about");
 });
 
 linkDoingNow.addEventListener("click", function() {
-    const currentActive = document.querySelectorAll("ul.links > .active, section.active, div.active");
+    currentActive = document.querySelectorAll("ul.links > .active, section.active, div.active");
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
     }
     linkDoingNow.classList.add("active");
     doingNowSection.classList.add("active")
+    localStorage.setItem("current-page", "doing-now");
 });
 
 linkDone.addEventListener("click", function() {
-    const currentActive = document.querySelectorAll("ul.links > .active, section.active, div.active");
+    currentActive = document.querySelectorAll("ul.links > .active, section.active, div.active");
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
     }
     linkDone.classList.add("active");
     doneSection.classList.add("active");
+    localStorage.setItem("current-page", "done");
 });
 
 //dark-theme switch
@@ -63,6 +66,38 @@ switchElement.addEventListener("click", function() {
     }
 });
 
+//save current page
+if (localStorage.getItem("current-page") == null) {
+    localStorage.setItem("current-page", "")
+}
+let currentActive = document.querySelectorAll("ul.links > .active, section.active, div.active");
+switch(localStorage.getItem("current-page")){
+    case "about":
+        for(let i = 0; i < currentActive.length; i++) {
+            currentActive[i].classList.remove("active")
+        }
+        linkAbout.classList.add("active");
+        aboutSection.classList.add("active");
+        localStorage.setItem("current-page", "about");
+    break;
+    case "doing-now":
+        for(let i = 0; i < currentActive.length; i++) {
+            currentActive[i].classList.remove("active")
+        }
+        linkDoingNow.classList.add("active");
+        doingNowSection.classList.add("active")
+        localStorage.setItem("current-page", "doing-now");
+    break;
+    case "done":
+        for(let i = 0; i < currentActive.length; i++) {
+            currentActive[i].classList.remove("active")
+        }
+        linkDone.classList.add("active");
+        doneSection.classList.add("active");
+        localStorage.setItem("current-page", "done");
+    break;
+}
+
 //save dark theme preference
 if (localStorage.getItem("dark-theme") == null) {
     localStorage.setItem("dark-theme", "false")
@@ -74,7 +109,6 @@ if (localStorage.getItem("dark-theme") == "true") {
     starOne.src="img/star-dark-1.svg"
     starTwo.src="img/star-dark-2.svg"
 }
-
 //get time
 function getTheTime() {
     let today = new Date();
