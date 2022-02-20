@@ -14,6 +14,8 @@ const doneSection = document.getElementById("done");
 
 const container = document.getElementsByClassName("container")[0]
 
+const hamburgerMenu = document.getElementById("side-menu-toggle");
+
 linkAbout.addEventListener("click", function() {
     currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
@@ -60,10 +62,12 @@ switchElement.addEventListener("click", function() {
         stickmanImg.src="img/foto-sinistra-dark.png"
         starOne.src="img/star-dark-1.svg"
         starTwo.src="img/star-dark-2.svg"
+        hamburgerMenu.src="img/hamburger-menu-dark.svg"
     } else {
         stickmanImg.src="img/foto-sinistra.png"
         starOne.src="img/star-light-1.svg"
         starTwo.src="img/star-light-2.svg"
+        hamburgerMenu.src="img/hamburger-menu.svg"
     }
     if(localStorage.getItem("dark-theme") == "false") {
         localStorage.setItem("dark-theme", "true");
@@ -112,11 +116,11 @@ if (localStorage.getItem("dark-theme") == null) {
     localStorage.setItem("dark-theme", "false")
 }
 if (localStorage.getItem("dark-theme") == "true") {
-    console.log("cambio a dark se variaile ok")
     bodyElement.classList.add("dark");
     stickmanImg.src="img/foto-sinistra-dark.png"
     starOne.src="img/star-dark-1.svg"
     starTwo.src="img/star-dark-2.svg"
+    hamburgerMenu.src="img/hamburger-menu-dark.svg"
 }
 //get time
 function getTheTime() {
@@ -140,7 +144,6 @@ getTheTime();
 setInterval(getTheTime, 20000);
 
 /* side menu */
-const hamburgerMenu = document.getElementById("side-menu-toggle");
 const overlayElement = document.getElementsByClassName("overlay")[0];
 const sideMenu = document.getElementsByClassName("sidemenu")[0];
 const sideClose = document.getElementById("side-close");

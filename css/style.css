@@ -6,10 +6,7 @@
     --color-light: #fdfdfd;
     --color-lightish: #e9e9e9;
     --color-dark: #707070;
-    --side-menu-width-mobile: 70vw;
-    --side-menu-width-tablet: 50vw;
-    --side-menu-transform-mobile: -70vw;
-    --side-menu-transform-tablet: -50vw;
+    --color-darker: #000000;
 }
 
 /* Setting */
@@ -199,7 +196,7 @@ ul.links li:last-child > span {
 #about { display: none; padding-left: 120px}
 #doing-now { display: none; padding-left: 120px}
 #done { display: none; padding-left: 220px}
-#contact-modal { display: none; }
+#contact-modal { opacity: 0; pointer-events: none; transition: all 0.1s ease-out;}
 
 #about.active { display: flex; }
 #doing-now.active { display: block; }
@@ -208,7 +205,8 @@ ul.links li:last-child > span {
 div.active { display: block !important; }
 
 #link-contact:hover #contact-modal {
-    display: block !important;
+    opacity: 1;
+    pointer-events: all;
 }
 
 
