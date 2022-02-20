@@ -6,6 +6,10 @@
     --color-light: #fdfdfd;
     --color-lightish: #e9e9e9;
     --color-dark: #707070;
+    --side-menu-width-mobile: 70vw;
+    --side-menu-width-tablet: 50vw;
+    --side-menu-transform-mobile: -70vw;
+    --side-menu-transform-tablet: -50vw;
 }
 
 /* Setting */
@@ -33,7 +37,20 @@ a {
     max-width: 1440px;
     margin: 0 auto;
     z-index: 1;
+    position: relative;
 }
+
+.container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0,0, 0.1);
+    z-index: 200;
+    display: none;
+}
+
 
 @media screen and (max-width: 1500px) {
     .container {
@@ -90,6 +107,10 @@ nav #side-menu-toggle{
     display: none;
 }
 
+nav #side-menu-toggle:hover{
+    cursor: pointer;
+}
+
 ul.links {
     list-style-type: none;
     display: flex;
@@ -120,7 +141,7 @@ ul.links li#link-contact {
     border-radius: 10px;
     top: 80%;
     left: -25%;
-    z-index: 9999;
+    z-index: 100;
     background-color: var(--color-light);
     cursor: initial;
 }
@@ -464,3 +485,87 @@ footer {
         transform: rotate(0);
     }
   }
+
+/* sidemenu */
+.container .sidemenu {
+    padding: 30px 0 30px 30px;
+    height: fit-content;
+    width: fit-content;
+    background-color: var(--color-light);
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: 9999;
+    overflow: hidden;
+    border: 1px solid var(--color-dark);
+    /* box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.54); */
+    transform: translateX(-110%);
+    transition: all 0.3s ease-out;
+}
+
+@media screen and (min-width: 1440px) {
+    .container .sidemenu {
+        display: none;
+    }
+}
+
+
+
+.container .sidemenu ul {
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+.container .sidemenu ul li{
+    display: block;
+    margin-bottom: 15px;
+}
+
+.container .sidemenu .contacts{
+    padding-right: 30px;
+}
+
+.sidemenu #side-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    padding: 10px 15px 15px 15px;
+}
+
+.sidemenu .row {
+    margin-top: 20px;
+}
+
+.sidemenu ul li.active span{
+    position: relative;
+}
+
+.sidemenu ul li.active span:before{
+    content: "";
+    background-color: var(--color-dark);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    height: 1px;
+    /* border-bottom: 1px solid var(--color-dark); */
+}
+
+.sidemenu ul li#side-link-about.active span:before{ width: 4.80em; }
+.sidemenu ul li#side-link-doing-now.active span:before{ width: 9.70em; }
+.sidemenu ul li#side-link-done.active span:before{ width: 7.8em; }
+
+.sidemenu ul li:hover {
+    cursor: pointer;
+}
+
+
+/* responsive */
+@media screen and (max-width: 876px) {
+    nav #side-menu-toggle{
+        display: block;
+    }
+    nav ul.links {
+        display: none;
+    }
+}

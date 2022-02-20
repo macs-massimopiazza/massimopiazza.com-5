@@ -7,7 +7,6 @@ const linkContact = document.getElementById("link-contact");
 const aboutSection = document.getElementById("about");
 const doingNowSection = document.getElementById("doing-now");
 const doneSection = document.getElementById("done");
-const contactModal = document.getElementById("contact-modal");
 
 const container = document.getElementsByClassName("container")[0]
 
@@ -130,3 +129,23 @@ const minutesElement = document.getElementById("minutes");
 getTheTime();
 setInterval(getTheTime, 20000);
 
+/* side menu */
+const hamburgerMenu = document.getElementById("side-menu-toggle");
+const overlayElement = document.getElementsByClassName("overlay")[0];
+const sideMenu = document.getElementsByClassName("sidemenu")[0];
+const sideClose = document.getElementById("side-close");
+
+sideClose.addEventListener("click", function(){
+    overlayElement.style.display = "none"
+    sideMenu.style.transform = "translateX(-110%)"
+});
+
+overlayElement.addEventListener("click", function(){
+    overlayElement.style.display = "none"
+    sideMenu.style.transform = "translateX(-110%)"
+});
+
+hamburgerMenu.addEventListener("click", function(){
+    overlayElement.style.display = "block"
+    sideMenu.style.transform = "translateX(0)"
+});
