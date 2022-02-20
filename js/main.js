@@ -201,3 +201,19 @@ sideLinkDone.addEventListener("click", function() {
     overlayElement.style.display = "none"
     sideMenu.style.transform = "translateX(-110%)"
 });
+
+const ageElement = document.getElementById("age");
+let dateElement = new Date();
+let currentYear = dateElement.getFullYear();
+let currentMonth = dateElement.getMonth();
+let currentDate = dateElement.getDate();
+let age
+console.log(currentYear, currentMonth, currentDate);
+
+if(currentDate < 24 && currentMonth < 9) {
+    age = (currentYear - 1999) - 1;
+} else {
+    age = currentYear - 1999;
+}
+
+ageElement.innerHTML = age

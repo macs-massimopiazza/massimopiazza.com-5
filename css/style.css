@@ -72,7 +72,7 @@ header {
     width: 45px;
     height: 20px;
     margin: 0 10px;
-    border: 1px solid var(--color-dark);
+    border: 1px solid var(--color-darker);
     border-radius: 9999px;
     position: relative;
 }
@@ -84,7 +84,7 @@ header {
 .switch-circle {
     width: 15px;
     height: 15px;
-    border: 1px solid var(--color-dark);
+    border: 1px solid var(--color-darker);
     border-radius: 9999px;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -224,7 +224,7 @@ main {
         height: auto;
         align-items: center;
     }
-    footer {
+    .footer-wrapper {
         padding-top: 30px;
         padding-bottom: 30px;
     }
@@ -348,11 +348,11 @@ main {
     width: calc(10vw + 150px);
 }
 
-.about-text ul li.two-lines {
-    line-height: 18px !important;
+li.two-lines {
+    line-height: 20px !important;
 }
 
-.about-text ul li.two-lines-underline {
+li.two-lines-underline {
     line-height: 22px !important;
 }
 
@@ -424,7 +424,7 @@ main {
 
 #doing-now .right .tag {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 #doing-now .row > div ul {
@@ -455,6 +455,7 @@ main {
 
     #doing-now .wrapper {
         flex-direction: column;
+        margin-top: 20px;
     }
 
     #doing-now .wrapper .left {
@@ -649,7 +650,7 @@ footer {
     width: fit-content;
     background-color: var(--color-light);
     position: absolute;
-    top: 30%;
+    top: 30vh;
     left: 0;
     z-index: 9999;
     overflow: hidden;
@@ -682,6 +683,10 @@ footer {
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid var(--color-dark);
+}
+
+.sidemenu .contacts .email {
+    margin-bottom: 3px;
 }
 
 .sidemenu #side-close {
