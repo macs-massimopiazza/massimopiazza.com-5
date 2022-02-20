@@ -1,4 +1,4 @@
-@import url(https://it.allfont.net/allfont.css?fonts=courier-new);
+/* @import url(https://it.allfont.net/allfont.css?fonts=courier-new); */
 
 /* Variables */
 :root {
@@ -218,11 +218,15 @@ main {
     justify-content: center;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     main {
-        min-height: calc(100vh - 100px);
+        min-height: calc(100vh - 150px);
         height: auto;
         align-items: center;
+    }
+    footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
 
@@ -353,6 +357,9 @@ main {
 }
 
 @media screen and (max-width: 820px) {
+    #about {
+        padding: 0;
+    }
     #about .about-img {
         display: none;
     }
@@ -362,7 +369,7 @@ main {
     }
 
     #about .about-text{
-        padding-left: 10px;
+        padding-left: 20px;
     }
 }
 
@@ -389,7 +396,6 @@ main {
         margin-top: 25px;
     }
 }
-
 
 
 /*Doing Now*/
@@ -451,6 +457,9 @@ main {
         flex-direction: column;
     }
 
+    #doing-now .wrapper .left {
+        padding-right: 0;
+    }
 
     #doing-now .wrapper .right {
         margin-top: 40px;
@@ -460,13 +469,13 @@ main {
 @media screen and (max-width: 600px) {
     #doing-now {
         padding: 0 10px;
-        padding-left: 30px;
+        padding-left: 0;
     }
 }
 
 /*Done*/
 #done {
-    height: 85%;
+    height: 90%;
     justify-content: center;
 }
 
@@ -484,8 +493,13 @@ main {
 }
 
 #done .row .left {
-    padding-right: 80px;
+    padding: 0 80px;
 }
+
+#done .right {
+    max-width: 360px;
+}
+
 
 #done .right .tag {
     display: block;
@@ -513,6 +527,39 @@ main {
     height: 20px;
 }
 
+@media screen and (max-width: 860px) {
+    #done {
+        height: auto;
+    }
+    #done .row .left{
+        padding-right: 60px;
+        padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #done .wrapper {
+        flex-direction: column;
+        padding-left: 50px;
+        padding-top: 50px;
+    }
+
+    #done .row .left{
+        padding: 0;
+    }
+
+    #done .right span.title {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #done .wrapper {
+        padding-left: 0;
+        padding-top: 30px;
+    }
+}
+
 /* Footer */
 footer {
     height: 40px;
@@ -522,7 +569,7 @@ footer {
 .footer-wrapper {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 1300px) {
@@ -530,7 +577,7 @@ footer {
         display: none;
     }
     .footer-wrapper {
-        justify-content: flex-end;
+        justify-content: center;
     }
 }
 
@@ -573,6 +620,12 @@ footer {
 
 @media screen and (max-width: 600px) {
     .star-1{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .star-2{
         display: none;
     }
 }
