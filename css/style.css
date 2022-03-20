@@ -61,6 +61,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: transform 0.5s ease-out;
+    transform: translateY(-100%);
+}
+
+.loaded header {
+    transform: none;
 }
 
 /* switch */
@@ -577,6 +583,12 @@ li.two-lines-underline {
 footer {
     height: 40px;
     width: 100%;
+    transition: transform 0.5s ease-out;
+    transform: translateY(100%);
+}
+
+.loaded footer {
+    transform: none;
 }
 
 .footer-wrapper {

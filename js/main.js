@@ -1,3 +1,12 @@
+const container = document.getElementsByClassName("container")[0]
+
+window.addEventListener("DOMContentLoaded", function(){
+    setTimeout(()=> {
+        console.log(container)
+        container.classList.add("loaded")
+    }, 100)
+});
+
 //show page content
 const linkAbout = document.getElementById("link-about");
 const linkDoingNow = document.getElementById("link-doing-now");
@@ -12,7 +21,7 @@ const aboutSection = document.getElementById("about");
 const doingNowSection = document.getElementById("doing-now");
 const doneSection = document.getElementById("done");
 
-const container = document.getElementsByClassName("container")[0]
+// const container = document.getElementsByClassName("container")[0]
 
 const hamburgerMenu = document.getElementById("side-menu-toggle");
 
