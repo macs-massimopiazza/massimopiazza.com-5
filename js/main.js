@@ -5,6 +5,10 @@ window.addEventListener("DOMContentLoaded", function(){
         console.log(container)
         container.classList.add("loaded")
     }, 100)
+    setTimeout(()=> {
+        console.log(container)
+        container.classList.add("settle")
+    }, 800)
 });
 
 //show page content

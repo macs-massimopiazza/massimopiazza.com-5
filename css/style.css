@@ -35,6 +35,11 @@ a {
     margin: 0 auto;
     z-index: 1;
     position: relative;
+    overflow: hidden;
+}
+
+.container.settle {
+    overflow: visible;
 }
 
 .container .overlay {
