@@ -30,6 +30,14 @@ const doneSection = document.getElementById("done");
 const hamburgerMenu = document.getElementById("side-menu-toggle");
 
 linkAbout.addEventListener("click", function() {
+    //animate on click
+    aboutSection.style.transform = "translateX(-10%)"
+    aboutSection.style.opacity = "0"
+    setTimeout(()=> {
+        aboutSection.style.transform = "none"
+        aboutSection.style.opacity = "1"
+    }, 200)
+
     currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
@@ -41,6 +49,14 @@ linkAbout.addEventListener("click", function() {
 });
 
 linkDoingNow.addEventListener("click", function() {
+    //animate on click
+    doingNowSection.style.transform = "translateX(-10%)"
+    doingNowSection.style.opacity = "0"
+    setTimeout(()=> {
+        doingNowSection.style.transform = "none"
+        doingNowSection.style.opacity = "1"
+    }, 200)
+
     currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
@@ -52,6 +68,14 @@ linkDoingNow.addEventListener("click", function() {
 });
 
 linkDone.addEventListener("click", function() {
+    //animate on click
+    doneSection.style.transform = "translateX(-10%)"
+    doneSection.style.opacity = "0"
+    setTimeout(()=> {
+        doneSection.style.transform = "none"
+        doneSection.style.opacity = "1"
+    }, 200)
+
     currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
@@ -177,6 +201,14 @@ hamburgerMenu.addEventListener("click", function(){
 });
 
 sideLinkAbout.addEventListener("click", function() {
+    //animate on click
+    aboutSection.style.transform = "translateX(-10%)"
+    aboutSection.style.opacity = "0"
+    setTimeout(()=> {
+        aboutSection.style.transform = "none"
+        aboutSection.style.opacity = "1"
+    }, 200)
+
     currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
@@ -190,6 +222,14 @@ sideLinkAbout.addEventListener("click", function() {
 });
 
 sideLinkDoingNow.addEventListener("click", function() {
+    //animate on click
+    doingNowSection.style.transform = "translateX(-10%)"
+    doingNowSection.style.opacity = "0"
+    setTimeout(()=> {
+        doingNowSection.style.transform = "none"
+        doingNowSection.style.opacity = "1"
+    }, 200)
+
     currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
@@ -203,6 +243,14 @@ sideLinkDoingNow.addEventListener("click", function() {
 });
 
 sideLinkDone.addEventListener("click", function() {
+    //animate on click
+    doneSection.style.transform = "translateX(-10%)"
+    doneSection.style.opacity = "0"
+    setTimeout(()=> {
+        doneSection.style.transform = "none"
+        doneSection.style.opacity = "1"
+    }, 200)
+
     currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
         currentActive[i].classList.remove("active")
