@@ -25,13 +25,16 @@ const aboutSection = document.getElementById("about");
 const doingNowSection = document.getElementById("doing-now");
 const doneSection = document.getElementById("done");
 
+const pageArrowLeft = document.getElementById("arrow-left");
+const pageArrowRight = document.getElementById("arrow-right");
+
 // const container = document.getElementsByClassName("container")[0]
 
 const hamburgerMenu = document.getElementById("side-menu-toggle");
 
 linkAbout.addEventListener("click", function() {
     //animate on click
-    aboutSection.style.transform = "translateX(-10%)"
+    aboutSection.style.transform = "translateX(10%)"
     aboutSection.style.opacity = "0"
     setTimeout(()=> {
         aboutSection.style.transform = "none"
@@ -44,18 +47,30 @@ linkAbout.addEventListener("click", function() {
     }
     linkAbout.classList.add("active");
     sideLinkAbout.classList.add("active");
-    aboutSection.classList.add("active");
+    aboutSection.classList.add("active")
     localStorage.setItem("current-page", "about");
 });
 
 linkDoingNow.addEventListener("click", function() {
-    //animate on click
-    doingNowSection.style.transform = "translateX(-10%)"
-    doingNowSection.style.opacity = "0"
-    setTimeout(()=> {
-        doingNowSection.style.transform = "none"
-        doingNowSection.style.opacity = "1"
-    }, 200)
+    if(localStorage.getItem("current-page") == "about") {
+        //animate on click
+        doingNowSection.style.transform = "translateX(-10%)"
+        doingNowSection.style.opacity = "0"
+        setTimeout(()=> {
+            doingNowSection.style.transform = "none"
+            doingNowSection.style.opacity = "1"
+        }, 200)
+    } else {
+        //animate on click
+        doingNowSection.style.transform = "translateX(10%)"
+        doingNowSection.style.opacity = "0"
+        setTimeout(()=> {
+            doingNowSection.style.transform = "none"
+            doingNowSection.style.opacity = "1"
+        }, 200)
+    }
+
+    
 
     currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
@@ -83,6 +98,7 @@ linkDone.addEventListener("click", function() {
     linkDone.classList.add("active");
     sideLinkDone.classList.add("active");
     doneSection.classList.add("active");
+    pageArrowRight.
     localStorage.setItem("current-page", "done");
 });
 
@@ -145,6 +161,7 @@ switch(localStorage.getItem("current-page")){
         sideLinkDone.classList.add("active");   
         doneSection.classList.add("active");
         localStorage.setItem("current-page", "done");
+        pageArrowRight.
     break;
 }
 
@@ -202,7 +219,7 @@ hamburgerMenu.addEventListener("click", function(){
 
 sideLinkAbout.addEventListener("click", function() {
     //animate on click
-    aboutSection.style.transform = "translateX(-10%)"
+    aboutSection.style.transform = "translateX(10%)"
     aboutSection.style.opacity = "0"
     setTimeout(()=> {
         aboutSection.style.transform = "none"
@@ -223,12 +240,23 @@ sideLinkAbout.addEventListener("click", function() {
 
 sideLinkDoingNow.addEventListener("click", function() {
     //animate on click
-    doingNowSection.style.transform = "translateX(-10%)"
-    doingNowSection.style.opacity = "0"
-    setTimeout(()=> {
-        doingNowSection.style.transform = "none"
-        doingNowSection.style.opacity = "1"
-    }, 200)
+    if(localStorage.getItem("current-page") == "about") {
+        //animate on click
+        doingNowSection.style.transform = "translateX(-10%)"
+        doingNowSection.style.opacity = "0"
+        setTimeout(()=> {
+            doingNowSection.style.transform = "none"
+            doingNowSection.style.opacity = "1"
+        }, 200)
+    } else {
+        //animate on click
+        doingNowSection.style.transform = "translateX(10%)"
+        doingNowSection.style.opacity = "0"
+        setTimeout(()=> {
+            doingNowSection.style.transform = "none"
+            doingNowSection.style.opacity = "1"
+        }, 200)
+    }
 
     currentActive = document.querySelectorAll("li.active, div.active, section.active")
     for(let i = 0; i < currentActive.length; i++) {
@@ -277,3 +305,148 @@ if(currentDate < 24 && currentMonth < 9) {
 }
 
 ageElement.innerHTML = age
+
+//change page arrows logic
+pageArrowRight.addEventListener("click", function() {
+    switch(localStorage.getItem("current-page")) {
+        case "about":
+            if(localStorage.getItem("current-page") == "about") {
+                //animate on click
+                doingNowSection.style.transform = "translateX(-10%)"
+                doingNowSection.style.opacity = "0"
+                setTimeout(()=> {
+                    doingNowSection.style.transform = "none"
+                    doingNowSection.style.opacity = "1"
+                }, 200)
+            } else {
+                //animate on click
+                doingNowSection.style.transform = "translateX(10%)"
+                doingNowSection.style.opacity = "0"
+                setTimeout(()=> {
+                    doingNowSection.style.transform = "none"
+                    doingNowSection.style.opacity = "1"
+                }, 200)
+            }
+        
+            
+        
+            currentActive = document.querySelectorAll("li.active, div.active, section.active")
+            for(let i = 0; i < currentActive.length; i++) {
+                currentActive[i].classList.remove("active")
+            }
+            linkDoingNow.classList.add("active");
+            sideLinkDoingNow.classList.add("active");
+            doingNowSection.classList.add("active")
+            localStorage.setItem("current-page", "doing-now");
+            
+            break;
+        case "doing-now":
+            //animate on click
+            doneSection.style.transform = "translateX(-10%)"
+            doneSection.style.opacity = "0"
+            setTimeout(()=> {
+                doneSection.style.transform = "none"
+                doneSection.style.opacity = "1"
+            }, 200)
+
+            currentActive = document.querySelectorAll("li.active, div.active, section.active")
+            for(let i = 0; i < currentActive.length; i++) {
+                currentActive[i].classList.remove("active")
+            }
+            linkDone.classList.add("active");
+            sideLinkDone.classList.add("active");
+            doneSection.classList.add("active");
+            localStorage.setItem("current-page", "done");
+            
+            break;
+        case "done":
+            //animate on click
+            aboutSection.style.transform = "translateX(-10%)"
+            aboutSection.style.opacity = "0"
+            setTimeout(()=> {
+                aboutSection.style.transform = "none"
+                aboutSection.style.opacity = "1"
+            }, 200)
+
+            currentActive = document.querySelectorAll("li.active, div.active, section.active")
+            for(let i = 0; i < currentActive.length; i++) {
+                currentActive[i].classList.remove("active")
+            }
+            linkAbout.classList.add("active");
+            sideLinkAbout.classList.add("active");
+            aboutSection.classList.add("active");
+            localStorage.setItem("current-page", "about");
+            break;
+    }
+})
+
+pageArrowLeft.addEventListener("click", function() {
+    switch(localStorage.getItem("current-page")) {
+        case "about":
+            //animate on click
+            doneSection.style.transform = "translateX(10%)"
+            doneSection.style.opacity = "0"
+            setTimeout(()=> {
+                doneSection.style.transform = "none"
+                doneSection.style.opacity = "1"
+            }, 200)
+
+            currentActive = document.querySelectorAll("li.active, div.active, section.active")
+            for(let i = 0; i < currentActive.length; i++) {
+                currentActive[i].classList.remove("active")
+            }
+            linkDone.classList.add("active");
+            sideLinkDone.classList.add("active");
+            doneSection.classList.add("active");
+            localStorage.setItem("current-page", "done");
+            
+            break;
+        case "doing-now":
+            //animate on click
+            aboutSection.style.transform = "translateX(10%)"
+            aboutSection.style.opacity = "0"
+            setTimeout(()=> {
+                aboutSection.style.transform = "none"
+                aboutSection.style.opacity = "1"
+            }, 200)
+
+            currentActive = document.querySelectorAll("li.active, div.active, section.active")
+            for(let i = 0; i < currentActive.length; i++) {
+                currentActive[i].classList.remove("active")
+            }
+            linkAbout.classList.add("active");
+            sideLinkAbout.classList.add("active");
+            aboutSection.classList.add("active");
+            localStorage.setItem("current-page", "about");
+            
+            break;
+        case "done":
+            if(localStorage.getItem("current-page") == "about") {
+                //animate on click
+                doingNowSection.style.transform = "translateX(-10%)"
+                doingNowSection.style.opacity = "0"
+                setTimeout(()=> {
+                    doingNowSection.style.transform = "none"
+                    doingNowSection.style.opacity = "1"
+                }, 200)
+            } else {
+                //animate on click
+                doingNowSection.style.transform = "translateX(10%)"
+                doingNowSection.style.opacity = "0"
+                setTimeout(()=> {
+                    doingNowSection.style.transform = "none"
+                    doingNowSection.style.opacity = "1"
+                }, 200)
+            }
+        
+            currentActive = document.querySelectorAll("li.active, div.active, section.active")
+            for(let i = 0; i < currentActive.length; i++) {
+                currentActive[i].classList.remove("active")
+            }
+            linkDoingNow.classList.add("active");
+            sideLinkDoingNow.classList.add("active");
+            doingNowSection.classList.add("active")
+            localStorage.setItem("current-page", "doing-now");
+            break;
+    }
+})

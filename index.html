@@ -20,11 +20,11 @@
     <div class="container">
         <header id="header">
             <div class="switch-wrapper">
-                <span class="switch-label">🌞</span>
+                <span class="switch-label no-select">🌞</span>
                 <div id="switch-container">
                     <div class="switch-circle"></div>
                 </div>
-                <span class="switch-label">🌚</span>
+                <span class="switch-label no-select">🌚</span>
             </div>
             <nav>
                 <ul class="links">
@@ -46,7 +46,7 @@
                 <img id="side-menu-toggle" src="img/hamburger-menu.svg">
             </nav>
             <div class="time-wrapper">
-                <div id="time"><span id="hours" class="blink"></span>:<span id="minutes" class="blink"></span></div>
+                <div id="time"><span class="time-emoji no-select">⌚</span><span id="hours" class="blink"></span>:<span id="minutes" class="blink"></span></div>
             </div>
         </header>
         <main>
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                         <div class="caption">
-                            <small>mia rappresentazione abbastanza fedele</small>
+                            <small>mia rappresentazione abbastanza fedele...</small>
                             <small>scherzone, passa sulla foto col mouse per vedermi</small>
                         </div>
                     </div>
@@ -178,12 +178,12 @@
         <footer>
             <div class="footer-wrapper">
                 <!-- <span class="footer-disclaimer">si quando ho creato questo sito mi piacevano i siti semplicini e bruttini (non come me eheh)</span> -->
-                <span class="footer-disclaimer">attenzione, sito ancora in costruzione 🔨</span>
-                <a href="https://www.massimopiazza.com/macs-v4/" target="blank">👴🏻 vecchio sito</a>
+                <span class="footer-disclaimer">attenzione, sito ancora in costruzione <span class="no-select">🔨</span></span>
+                <a href="https://www.massimopiazza.com/macs-v4/" target="blank"><span class="no-select">👴🏻</span> vecchio sito</a>
             </div>
         </footer>
-        <img src="img/star-light-1.svg" class="star-1">
-        <img src="img/star-light-2.svg" class="star-2">
+        <img src="img/star-light-1.svg" class="star-1 no-select">
+        <img src="img/star-light-2.svg" class="star-2 no-select">
         <div class="sidemenu">
             <ul>
                 <li id="side-link-about" class="active"><span>chi sono</span></li>
@@ -202,8 +202,9 @@
             <div id="side-close">x</div>
         </div>
         <div class="overlay"></div>
+        <div class="page-arrow no-select" id="arrow-left">⏪</div>
+        <div class="page-arrow no-select" id="arrow-right">⏩</div>
     </div>
-
     <script src="js/main.js"></script>
 </body>
 </html>

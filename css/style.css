@@ -23,7 +23,10 @@ body {
     transition: background-color 0.2s ease-out;
 }
 
-/* scrollbar style */ 
+.no-select { user-select: none; }
+
+
+/* scrollbar style */
 body::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -89,6 +92,36 @@ a {
     }
 }
 
+/* page arrows */
+.page-arrow {
+    position: absolute;
+    font-size: 20px;
+    transition: transform 0.2s;
+    padding: 30px;
+}
+
+.page-arrow:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#arrow-left {
+    left: 10px;
+    top: 50%;
+}
+
+#arrow-right {
+    right: 10px;
+    top: 50%;
+}
+
+@media screen and (max-width: 895px) {
+    .page-arrow {
+        display: none;
+    }
+}
+
+
 /* Header */
 header {
     height: 60px;
@@ -131,6 +164,11 @@ header {
     top: 50%;
     left: 25%;
     transition: 0.2s left ease-out;
+}
+
+.switch-label:hover {
+    animation: star-winkle 0.6s;
+    cursor: pointer;
 }
 
 /* navbar */
@@ -190,17 +228,19 @@ ul.links li#link-contact {
     margin-top: 20px;
 }
 
-ul.links li.active span{
+ul.links li span{
     position: relative;
 }
 
-ul.links li.active span:before{
+ul.links li span::before{
     content: "";
     background-color: var(--color-dark);
     bottom: 0;
     left: 25px;
     position: absolute;
     height: 1px;
+    width: 0;
+    transition: width .5s ease-out;
     /* border-bottom: 1px solid var(--color-dark); */
 }
 
@@ -217,6 +257,15 @@ ul.links li:last-child > span {
 }
 
 /* current time */
+.time-emoji {
+    padding-right: 5px;
+}
+
+.time-emoji:hover {
+    animation: star-winkle 0.6s;
+    cursor: pointer;
+}
+
 .blink {
     animation: blink-animation 6s steps(11, start) infinite;
     -webkit-animation: blink-animation 6s steps(11, start) infinite;
@@ -256,6 +305,7 @@ main {
     height: calc(100vh - 100px); /* 60px header - 40px footer*/
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 700px) {
@@ -415,7 +465,7 @@ li.two-lines-underline {
     #about .about-img {
         display: none;
     }
-    
+
     #about .about-text ul li{
         line-height: 25px;
     }
@@ -429,7 +479,7 @@ li.two-lines-underline {
     #about .about-img {
         display: none;
     }
-    
+
     #about .about-text ul li{
         line-height: 25px;
     }
@@ -789,7 +839,7 @@ footer {
 
 
 /* responsive */
-@media screen and (max-width: 876px) {
+@media screen and (max-width: 895px) {
     nav #side-menu-toggle{
         display: block;
     }
