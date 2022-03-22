@@ -25,6 +25,11 @@ body {
 
 .no-select { user-select: none; }
 
+::selection {
+    background-color: #fc6767;
+    color: #fff;
+}
+
 
 /* scrollbar style */
 body::-webkit-scrollbar-track
@@ -232,16 +237,22 @@ ul.links li span{
     position: relative;
 }
 
+/* DA VALUTARE ul.links li.active{
+    color: #fc6767;
+    valuta di metterlo anche per i link
+} */
 ul.links li span::before{
     content: "";
+    /* DA VALUTARE background-color: #fc6767; */
     background-color: var(--color-dark);
+    /* DA VALUTARE bottom: -2px; */
     bottom: 0;
     left: 25px;
     position: absolute;
+    /* DA VALUTARE height: 2px; */
     height: 1px;
     width: 0;
     transition: width .5s ease-out;
-    /* border-bottom: 1px solid var(--color-dark); */
 }
 
 ul.links li#link-about.active span:before{ width: 4.80em; }
