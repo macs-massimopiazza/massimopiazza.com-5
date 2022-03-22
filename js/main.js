@@ -1,4 +1,5 @@
 const container = document.getElementsByClassName("container")[0]
+const main = document.getElementsByTagName("main")[0]
 
 window.addEventListener("DOMContentLoaded", function(){
     setTimeout(()=> {
