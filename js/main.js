@@ -98,7 +98,6 @@ linkDone.addEventListener("click", function() {
     linkDone.classList.add("active");
     sideLinkDone.classList.add("active");
     doneSection.classList.add("active");
-    pageArrowRight.
     localStorage.setItem("current-page", "done");
 });
 
