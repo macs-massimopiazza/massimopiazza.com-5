@@ -22,9 +22,9 @@ body.dark ul.links li.active span:before {
     background-color: var(--color-light);
 }
 
-body.dark ul.links li > span {
+/* body.dark ul.links li > span {
     border-right: 1px solid var(--color-light);
-}
+} */
 
 /* contact modal */
 body.dark #contact-modal {

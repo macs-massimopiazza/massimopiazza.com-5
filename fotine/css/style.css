@@ -238,10 +238,7 @@ main {
     display: flex;
     justify-content: center;
     overflow: hidden;
-}
-
-.loaded main {
-    overflow-y: auto;
+    padding: 20px 0;
 }
 
 @media screen and (max-width: 700px) {
@@ -277,7 +274,7 @@ main {
 /* pics-wrapper */
 #pics-wrapper {
     justify-content: center;
-    padding: 0 40px;
+    overflow-y: auto;
 }
 
 #pics-wrapper .row {
@@ -289,7 +286,24 @@ main {
 
 #pics-wrapper .pic-card {
     width: calc((100% / 3) - 20px);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
 }
+
+
+@media screen and (max-width: 1080px) {
+    #pics-wrapper .pic-card {
+        width: calc((100% / 2) - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #pics-wrapper .pic-card {
+        width: calc(100% - 20px);
+    }
+}
+
 
 #pics-wrapper .pic-card img {
     width: 100%;
