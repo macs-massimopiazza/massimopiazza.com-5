@@ -3,11 +3,9 @@ const main = document.getElementsByTagName("main")[0]
 
 window.addEventListener("DOMContentLoaded", function(){
     setTimeout(()=> {
-        console.log(container)
         container.classList.add("loaded")
     }, 100)
     setTimeout(()=> {
-        console.log(container)
         container.classList.add("settle")
     }, 800)
 });
