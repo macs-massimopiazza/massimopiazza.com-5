@@ -716,6 +716,10 @@ footer {
     justify-content: space-between;
 }
 
+.footer-links a{
+    border-bottom: none;
+}
+
 @media screen and (max-width: 1300px) {
     .footer-disclaimer {
         display: none;
