@@ -1,7 +1,3 @@
-/* <div id="switch"></div>
-
-<p data-i18n="hello"></p> */
-
 const italian = {
     "testo": "prova",
 
