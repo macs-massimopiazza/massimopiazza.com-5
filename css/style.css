@@ -7,6 +7,8 @@
     --color-lightish: #e9e9e9;
     --color-dark: #707070;
     --color-darker: #000000;
+    --sl-width: 46px;
+    --sl-height: 23px;
 }
 
 /* Setting */
@@ -273,9 +275,14 @@ ul.links li span::before{
     transition: width .5s ease-out;
 }
 
-ul.links li#link-about.active span:before{ width: 4.80em; }
+ul.links li.active span::before {
+    width: calc(100% - 50px);
+
+}
+
+/* ul.links li#link-about.active span:before{ width: 4.80em; }
 ul.links li#link-doing-now.active span:before{ width: 9.70em; }
-ul.links li#link-done.active span:before{ width: 7.8em; }
+ul.links li#link-done.active span:before{ width: 7.8em; } */
 
 ul.links li:hover {
     cursor: pointer;

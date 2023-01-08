@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massimo Piazza</title>
+    <link href="https://unpkg.com/i18n-switch@2.0.1/style/I18NSwitch.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dark-theme.css">
     <link rel="stylesheet" href="fonts/fonts.css">
@@ -27,18 +28,19 @@
 <body>
     <div class="container">
         <header id="header">
-            <div class="switch-wrapper">
+            <div class="switch-wrapper" style="display: none;">
                 <span class="switch-label no-select">🌞</span>
                 <div id="switch-container">
                     <div class="switch-circle"></div>
                 </div>
                 <span class="switch-label no-select">🌚</span>
             </div>
+            <div id="switch"></div>
             <nav>
                 <ul class="links">
-                    <li id="link-about" class="active"><span>chi sono</span></li>
-                    <li id="link-doing-now"><span>cosa sto facendo</span></li>
-                    <li id="link-done"><span>cosa ho fatto</span></li>
+                    <li id="link-about" class="active" ><span data-i18n="link_about">chi sono</span></li>
+                    <li id="link-doing-now"><span data-i18n="link_doing_now">cosa sto facendo</span></li>
+                    <li id="link-done"><span data-i18n="link_done">cosa ho fatto</span></li>
                     <li id="link-contact">
                         <span>contatti :)</span>
                         <div id="contact-modal">
@@ -202,9 +204,9 @@
         <img src="img/star-light-2.svg" class="star-2 no-select">
         <div class="sidemenu">
             <ul>
-                <li id="side-link-about" class="active"><span>chi sono</span></li>
-                <li id="side-link-doing-now"><span>cosa sto facendo</span></li>
-                <li id="side-link-done"><span>cosa ho fatto</span></li>
+                <li id="side-link-about" class="active"><span data-i18n="side_link_about">chi sono</span></li>
+                <li id="side-link-doing-now"><span data-i18n="side_link_doing_now">cosa sto facendo</span></li>
+                <li id="side-link-done"><span data-i18n="side_link_done">cosa ho fatto</span></li>
                 <!-- <li style="margin-bottom: 5px; cursor: default;">contatti :)<br><span style="font-size: 25px">&#8595;</span></li> -->
             </ul>
             <div class="contacts">
@@ -221,6 +223,8 @@
         <div class="page-arrow no-select" id="arrow-left">⏪</div>
         <div class="page-arrow no-select" id="arrow-right">⏩</div>
     </div>
+    <script src="https://unpkg.com/i18n-switch@2.0.1/script/I18NSwitch.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
 </body>
 </html>
