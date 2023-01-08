@@ -42,7 +42,7 @@
                     <li id="link-doing-now"><span data-i18n="link_doing_now">cosa sto facendo</span></li>
                     <li id="link-done"><span data-i18n="link_done">cosa ho fatto</span></li>
                     <li id="link-contact">
-                        <span>contatti :)</span>
+                        <span data-i18n="link_contacts">contatti :)</span>
                         <div id="contact-modal">
                             <p>email:</p>
                             <a href="mailto:me@massimopiazza.com" class="email">me@massimopiazza.com</a>
@@ -70,24 +70,24 @@
                             </div>
                         </div>
                         <div class="caption">
-                            <small>mia rappresentazione abbastanza fedele...</small>
-                            <small>scherzone, passa sulla foto col mouse per vedermi</small>
+                            <small data-i18n="img_caption">mia rappresentazione abbastanza fedele...</small>
+                            <small data-i18n="img_caption2">scherzone, passa sulla foto col mouse per vedermi</small>
                         </div>
                     </div>
                     <div class="about-text">
                         <ul>
-                            <span class="title">ciao</span>
-                            <li>sono massimo piazza</li>
-                            <li>ho <span id="age"></span> anni</li>
-                            <li>vivo a verooona</li>
-                            <li class="two-lines">professione non ben definita, diciamo programmatore </li>
-                            <li>scio, suono la batteria, vado in moto (e lavoro hihi)</li>
-                            <li class="two-lines-underline"><a href="/resources/cv-aggiornato-feb-22.pdf" target="blank">clicca qui, scarica il mio cv 📄</a></li>
-                            <li>ho finito le cose da dire</li>
-                            <li>questa lista deve essere più lunga</li>
-                            <li>ultimo punto e poi apposto</li>
+                            <span class="title" data-i18n="ab-title">ciao</span>
+                            <li data-i18n="ab-name">sono massimo piazza</li>
+                            <li data-i18n="ab-age">ho <span id="age"></span> anni</li>
+                            <li data-i18n="ab-city">vivo a verooona</li>
+                            <li class="two-lines" data-i18n="ab-occupation">professione non ben definita, diciamo programmatore </li>
+                            <li data-i18n="ab-hobbies">scio, suono la batteria, mi piacciono tanto moto e auto (e lavoro hihi)</li>
+                            <li class="two-lines-underline"><a id="cv_link" href="/resources/cv-aggiornato-feb-22.pdf" target="blank" data-i18n="ab-cv">clicca qui, scarica il mio cv 📄</a></li>
+                            <li data-i18n="ab-funny1">ho finito le cose da dire</li>
+                            <li data-i18n="ab-funny2">questa lista deve essere più lunga</li>
+                            <li data-i18n="ab-funny3">ultimo punto e poi apposto</li>
                             <li class="dog-trigger">
-                                <span>guarda questo</span>
+                                <span data-i18n="ab-dog_text">guarda questo</span>
                                 <div class="modal-dog">
                                     <img src="img/dog-sad.gif">
                                 </div>
@@ -192,7 +192,7 @@
         <footer>
             <div class="footer-wrapper">
                 <!-- <span class="footer-disclaimer">si quando ho creato questo sito mi piacevano i siti semplicini e bruttini (non come me eheh)</span> -->
-                <span class="footer-disclaimer">attenzione, sito ancora in costruzione <span class="no-select">🔨</span></span>
+                <span class="footer-disclaimer" data-i18n="footer_disclaimer">attenzione, sito ancora in costruzione <span class="no-select">🔨</span></span>
                 <div class="footer-links">
                     <a href="https://www.massimopiazza.com/fotine/"><span class="no-select">📸</span></a>,
                     <a href="https://www.massimopiazza.com/macs-v4/" target="_blank"><span class="no-select">👴🏻</span></a>,
@@ -204,9 +204,9 @@
         <img src="img/star-light-2.svg" class="star-2 no-select">
         <div class="sidemenu">
             <ul>
-                <li id="side-link-about" class="active"><span data-i18n="side_link_about">chi sono</span></li>
-                <li id="side-link-doing-now"><span data-i18n="side_link_doing_now">cosa sto facendo</span></li>
-                <li id="side-link-done"><span data-i18n="side_link_done">cosa ho fatto</span></li>
+                <li id="side-link-about" class="active"><span data-i18n="link_about">chi sono</span></li>
+                <li id="side-link-doing-now"><span data-i18n="link_doing_now">cosa sto facendo</span></li>
+                <li id="side-link-done"><span data-i18n="link_done">cosa ho fatto</span></li>
                 <!-- <li style="margin-bottom: 5px; cursor: default;">contatti :)<br><span style="font-size: 25px">&#8595;</span></li> -->
             </ul>
             <div class="contacts">
@@ -224,7 +224,7 @@
         <div class="page-arrow no-select" id="arrow-right">⏩</div>
     </div>
     <script src="https://unpkg.com/i18n-switch@2.0.1/script/I18NSwitch.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/lang.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

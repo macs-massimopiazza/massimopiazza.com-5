@@ -289,21 +289,6 @@ sideLinkDone.addEventListener("click", function() {
     sideMenu.style.transform = "translateX(-110%)"
 });
 
-const ageElement = document.getElementById("age");
-let dateElement = new Date();
-let currentYear = dateElement.getFullYear();
-let currentMonth = dateElement.getMonth();
-let currentDate = dateElement.getDate();
-let age
-
-if(currentDate < 24 && currentMonth < 9) {
-    age = (currentYear - 1999) - 1;
-} else {
-    age = currentYear - 1999;
-}
-
-ageElement.innerHTML = age
-
 //change page arrows logic
 pageArrowRight.addEventListener("click", function() {
     switch(localStorage.getItem("current-page")) {
