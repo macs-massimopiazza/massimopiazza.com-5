@@ -576,6 +576,10 @@ li.two-lines-underline {
     list-style-type: none;
 }
 
+#doing-now .row > div div.right ul {
+    max-width: 320px;
+}
+
 #doing-now .row > div ul li {
     position: relative;
     padding-left: 20px;
