@@ -4,7 +4,7 @@ body.dark {
 }
 
 /* switch */
-body.dark #switch-container, body.dark .switch-circle{
+body.dark #switch-container, body.dark #lang-switch {
     border: 1px solid var(--color-light);
 }
 

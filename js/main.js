@@ -101,24 +101,27 @@ linkDone.addEventListener("click", function() {
 });
 
 //dark-theme switch
-const switchElement = document.getElementById("switch-container");
+const switchContainer = document.getElementById("switch-container");
+const switchCircle = document.querySelector(".switch-circle");
 const bodyElement = document.getElementsByTagName("body")[0];
 const stickmanImg = document.getElementsByClassName("stickman")[0];
 const starOne = document.getElementsByClassName("star-1")[0];
 const starTwo = document.getElementsByClassName("star-2")[0];
 
-switchElement.addEventListener("click", function() { 
+switchContainer.addEventListener("click", function() { 
     bodyElement.classList.toggle("dark");
     if(bodyElement.classList[0] == "dark") {
         stickmanImg.src="img/foto-sinistra-dark.png"
         starOne.src="img/star-dark-1.svg"
         starTwo.src="img/star-dark-2.svg"
         hamburgerMenu.src="img/hamburger-menu-dark.svg"
+        switchCircle.innerHTML = "🌚";
     } else {
         stickmanImg.src="img/foto-sinistra.png"
         starOne.src="img/star-light-1.svg"
         starTwo.src="img/star-light-2.svg"
         hamburgerMenu.src="img/hamburger-menu.svg"
+        switchCircle.innerHTML = "🌞";
     }
     if(localStorage.getItem("dark-theme") == "false") {
         localStorage.setItem("dark-theme", "true");
@@ -173,6 +176,7 @@ if (localStorage.getItem("dark-theme") == "true") {
     starOne.src="img/star-dark-1.svg"
     starTwo.src="img/star-dark-2.svg"
     hamburgerMenu.src="img/hamburger-menu-dark.svg"
+    switchCircle.innerHTML = "🌚";
 }
 //get time
 function getTheTime() {

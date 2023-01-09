@@ -95,8 +95,6 @@ const italian = {
 };
 
 const english = {
-    "testo": "prova",
-
     //about page
     "img_caption": "my fairly faithful representation...",
     "img_caption2": "big joke, hover on the photo to see me",
@@ -175,7 +173,7 @@ const english = {
 
 
 const langSwitch = new I18NSwitch(
-    "switch",
+    "lang-switch",
     {
         flag: CountryFlags.ITALY,
         language: italian
@@ -189,7 +187,7 @@ const langSwitch = new I18NSwitch(
 
 getCurrentAge();
 
-document.getElementById("switch").addEventListener("click", () => {
+document.getElementById("lang-switch").addEventListener("click", () => {
     getCurrentAge();
     if(langSwitch.isSecondaryLanguageOn()) {
         document.getElementById('cv_link').setAttribute("href", "/resources/cv-updated-gen-2021-en.pdf");

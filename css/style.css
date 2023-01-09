@@ -162,6 +162,14 @@ header {
 }
 
 /* switch */
+.settings-switches {
+    display: flex;
+}
+
+#lang-switch {
+    border: 1px solid var(--color-darker);
+}
+
 .switch-wrapper {
     display: flex;
 }
@@ -180,9 +188,7 @@ header {
 }
 
 .switch-circle {
-    width: 15px;
-    height: 15px;
-    border: 1px solid var(--color-darker);
+    font-size: 15px;
     border-radius: 9999px;
     position: absolute;
     transform: translate(-50%, -50%);
