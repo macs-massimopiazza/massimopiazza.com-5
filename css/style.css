@@ -195,6 +195,7 @@ header {
     top: 50%;
     left: 25%;
     transition: 0.2s left ease-out;
+    user-select: none;
 }
 
 .switch-label:hover {
