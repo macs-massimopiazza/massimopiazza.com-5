@@ -125,7 +125,7 @@ const english = {
     "dnpr-title": "little projects",
     "dnpr-prj1_tag": "personal",
     "dnpr-prj1_title": "<a href='https://what-do-i-do-today-5ab1e.web.app' target='blank'>what do i do today</a>",
-    "dnpr-prj1_desc1": "I'm started making this funny game",
+    "dnpr-prj1_desc1": "I started making this funny game",
     "dnpr-prj1_desc2": "when you don't know what to do",
     "dnpr-prj1_desc3": "it suggests things for you to do",
     "dnpr-prj1_desc4": "I don't have a lot of time to on it at the moment :(",
