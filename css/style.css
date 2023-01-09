@@ -164,6 +164,7 @@ header {
 /* switch */
 .settings-switches {
     display: flex;
+    gap: 10px;
 }
 
 #lang-switch {
@@ -177,7 +178,6 @@ header {
 #switch-container {
     width: var(--sl-width);
     height: var(--sl-height);
-    margin: 0 10px;
     border: 1px solid var(--color-darker);
     border-radius: 9999px;
     position: relative;

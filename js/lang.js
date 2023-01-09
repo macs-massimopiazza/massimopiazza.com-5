@@ -195,3 +195,5 @@ document.getElementById("lang-switch").addEventListener("click", () => {
         document.getElementById('cv_link').setAttribute("href", "/resources/cv-aggiornato-feb-22-it.pdf");
     }
 })
+
+//TODO: save language preference
