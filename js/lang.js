@@ -171,15 +171,19 @@ const english = {
     "footer_disclaimer": "warning, website under costruction <span class='no-select'>🔨</span>"
 };
 
+const flags = {
+    ITALY: '/img/italy.png',
+    UNITED_KINGDOM: '/img/united-kingdom.png',
+}
 
 const langSwitch = new I18NSwitch(
     "lang-switch",
     {
-        flag: CountryFlags.ITALY,
+        flag: flags.ITALY,
         language: italian
     },
     {
-        flag: CountryFlags.UNITED_KINGDOM,
+        flag: flags.UNITED_KINGDOM,
         language: english
     },
     italian
