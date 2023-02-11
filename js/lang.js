@@ -118,7 +118,7 @@ const english = {
     "dnjb-job1_from": "from december 2021",
     "dnjb-job1_tasks1": "I correct students' exercises,",
     "dnjb-job1_tasks2": "help them when they have problems",
-    "dnjb-job1_tasks3": "and, on the management side, to develop a final course project",
+    "dnjb-job1_tasks3": "and, on the management side, help them to develop a final course project",
     "dnjb-job2_name": "freelance web dev & pm",
     "dnjb-job2_from": "from november 2019",
     "dnjb-job2_tasks1": "I make websites eheh",
