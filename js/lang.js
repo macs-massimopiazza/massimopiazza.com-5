@@ -44,6 +44,7 @@ const italian = {
     "dnjb-job2_from": "da novembre 2019",
     "dnjb-job2_tasks1": "faccio sitini per chi ne ha bisogno",
     "dnjb-job2_tasks2": "senza una stack specifica",
+    "dnjb-job2_tasks3": "ogni tanto aiuto a coordinare progetti",
     "dnpr-title": "progettini",
     "dnpr-prj1_tag": "progettini",
     "dnpr-prj1_title": "<a href='https://what-do-i-do-today-5ab1e.web.app' target='blank'>what do i do today</a>",

@@ -572,6 +572,7 @@ li.two-lines-underline {
 
 #doing-now .row .left {
     padding-right: 80px;
+    max-width: 430px;
 }
 
 #doing-now .right .tag {
