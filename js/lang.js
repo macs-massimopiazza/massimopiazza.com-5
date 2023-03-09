@@ -30,7 +30,7 @@ const italian = {
     "ab-cv": "clicca qui, scarica il mio cv 📄",
     "ab-funny1": "ho finito le cose da dire",
     "ab-funny2": "questa lista deve essere più lunga",
-    "ab-funny3": "ultimo punto e poi apposto",
+    "ab-funny3": "ultimo punto e poi a posto",
     "ab-dog_text": "guarda questo",
 
     //doing now page
