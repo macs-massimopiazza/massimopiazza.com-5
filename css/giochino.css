@@ -1,0 +1,120 @@
+#game-wrapper {
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    z-index: 9999;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 700ms ease-out;
+}
+
+#game-wrapper.hide {
+    top: calc(-100% - 100px);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: .75rem;
+}
+
+.game-buttons {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.game-buttons.hide {
+    display: none;
+}
+
+#play-btn, #close-btn {
+    font-family: 'Courier New', arial;
+    font-size: 1rem;
+    padding: 0 0.25rem;
+    border: none;
+    background-color: #fff;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#score {
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    font-size: 1rem;
+}
+
+#playground {
+    border: 1px solid black;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+}
+
+#playground > * {
+    position: absolute;
+}
+
+#playground.blurred #player, #playground.blurred #obstacle {
+    filter: blur(2px);
+}
+
+#player {
+    width: 60px;
+    aspect-ratio: 9/16;
+    bottom: 0;
+    left: 60px;
+    display: flex;
+    align-items: flex-end;
+    user-select: none;
+}
+
+#player img {
+    width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#player.jump {
+    animation: jump 800ms ease-in-out;
+}
+
+@keyframes jump {
+    50% {
+        bottom: 120px
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+#obstacle {
+    width: 40px;
+    bottom: 0;
+    right: 0;
+}
+
+#obstacle img {
+    width: 100%;
+    display: block;
+}
+
+#obstacle.advancing {
+    animation: advance 2s linear infinite;
+}
+
+@keyframes advance {
+    0% {
+        right: -30px;
+    }
+    100% {
+        right: calc(100% + 30px);
+    }
+}

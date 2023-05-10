@@ -31,7 +31,7 @@ const italian = {
     "ab-funny1": "ho finito le cose da dire",
     "ab-funny2": "questa lista deve essere più lunga",
     "ab-funny3": "ultimo punto e poi a posto",
-    "ab-dog_text": "guarda questo",
+    "ab-dog_text": "o guarda questo",
 
     //doing now page
     "dnjb-title": "lavoro veeeroo",
@@ -92,6 +92,12 @@ const italian = {
     "link_done": "cosa ho fatto",
     "link_contacts": "contatti :)",
 
+    //giochino
+    "game-title": "il giochino",
+    "game-play": "gioca 🎮",
+    "game-close": "chiudi ❌",
+    "game-cta": "sorpresa, clicca questo",
+
     //footer
     "footer_disclaimer": "attenzione, sito ancora in costruzione <span class='no-select'>🔨</span>"
 };
@@ -110,7 +116,7 @@ const english = {
     "ab-funny1": "I ran out of things to say",
     "ab-funny2": "this list should be longer",
     "ab-funny3": "last one and that's it",
-    "ab-dog_text": "watch this",
+    "ab-dog_text": "or watch this",
 
     //doing now page
     "dnjb-title": "reeeal job",
@@ -170,6 +176,12 @@ const english = {
     "link_doing_now": "what I am doing ",
     "link_done": "what I've done",
     "link_contacts": "contacts :)",
+
+    //giochino
+    "game-title": "macs run",
+    "game-play": "play 🎮",
+    "game-close": "close ❌",
+    "game-cta": "surprise, click this",
 
     //footer
     "footer_disclaimer": "warning, website under costruction <span class='no-select'>🔨</span>"

@@ -46,3 +46,20 @@ body.dark .sidemenu ul li.active span:before {
 body.dark .container .sidemenu .contacts {
     border-top: 1px solid var(--color-light);
 }
+
+/* giochino */
+body.dark #open-game-cta {
+    border-bottom: 1px solid var(--color-lightish);
+    color: var(--color-lightish);
+}
+
+body.dark #game-wrapper {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+body.dark #play-btn, body.dark #close-btn {
+    background-color: var(--color-dark);
+    border-color: var(--color-lightish);
+    color: var(--color-light);
+}

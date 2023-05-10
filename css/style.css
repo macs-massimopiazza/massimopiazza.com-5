@@ -481,6 +481,11 @@ main {
     cursor: pointer;
 }
 
+#open-game-cta {
+    border-bottom: 1px solid var(--color-dark);
+    color: var(--color-dark);
+}
+
 .about-text ul li:last-child:hover .modal-dog {
     opacity: 1;
     pointer-events: all;

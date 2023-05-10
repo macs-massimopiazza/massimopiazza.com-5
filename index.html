@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massimo Piazza</title>
+    <link rel="stylesheet" href="css/giochino.css">
     <link rel="stylesheet" href="css/I18NSwitch.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dark-theme.css">
@@ -86,12 +87,14 @@
                             <li data-i18n="ab-funny1">ho finito le cose da dire</li>
                             <li data-i18n="ab-funny2">questa lista deve essere più lunga</li>
                             <li data-i18n="ab-funny3">ultimo punto e poi a posto</li>
+                            <li><span id="open-game-cta" data-i18n="game-cta">clicca questo, sorpresa</span></li>
                             <li class="dog-trigger">
-                                <span data-i18n="ab-dog_text">guarda questo</span>
+                                <span data-i18n="ab-dog_text">o guarda questo</span>
                                 <div class="modal-dog">
                                     <img src="img/dog-sad.gif">
                                 </div>
                             </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -202,7 +205,7 @@
                 <div class="footer-links">
                     <a href="https://www.massimopiazza.com/fotine/"><span class="no-select">📸</span></a>,
                     <a href="https://www.massimopiazza.com/macs-v4/" target="_blank"><span class="no-select">👴🏻</span></a>,
-                    <a href="https://www.massimopiazza.com/sfondini/"><span class="no-select">🖼️</span></a>
+                    <a id="open-game-btn"><span class="no-select">🎮</span></a>
                 </div>
             </div>
         </footer>
@@ -229,8 +232,28 @@
         <div class="page-arrow no-select" id="arrow-left">⏪</div>
         <div class="page-arrow no-select" id="arrow-right">⏩</div>
     </div>
+    
+    <!-- GIOCHINO -->
+    <div id="game-wrapper" class="hide">
+        <h1 data-i18n="game-title">il giochino</h1>
+        <div id="playground" class="blurred">
+            <span id="score"></span>
+            <div class="game-buttons">
+                <button id="play-btn" data-i18n="game-play">gioca 🎮</button>
+                <button id="close-btn" data-i18n="game-close">chiudi ❌</button>
+            </div>
+            <div id="player">
+                <img src="img/giochino/macs.webp" alt="game player">
+            </div>
+            <div id="obstacle">
+                <img src="img/giochino/cacca.png" alt="obstacle, poop emoji">
+            </div>
+        </div>
+    </div>
+
     <script src="js/I18NSwitch.js"></script>
     <script src="js/lang.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/giochino.js"></script>
 </body>
 </html>
