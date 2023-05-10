@@ -58,6 +58,10 @@ body.dark #game-wrapper {
     color: var(--color-light);
 }
 
+body.dark #playground {
+    border-color: var(--color-lightish);
+}
+
 body.dark #play-btn, body.dark #close-btn {
     background-color: var(--color-dark);
     border-color: var(--color-lightish);
