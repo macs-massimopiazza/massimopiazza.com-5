@@ -22,9 +22,10 @@ closeBtn.addEventListener('click', () => {
     gameWrapper.classList.add('hide');
 });
 
-playBtn.addEventListener('click', startGame);
+playBtn.addEventListener('click', (e) => { startGame(e) });
 
-function startGame() {
+function startGame(e) {
+    e.stopPropagation();
     score = 0;
     playground.classList.remove('blurred');
     btnsWrapper.classList.add('hide');
