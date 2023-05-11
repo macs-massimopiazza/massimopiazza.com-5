@@ -210,9 +210,9 @@ getCurrentAge();
 document.getElementById("lang-switch").addEventListener("click", () => {
     getCurrentAge();
     if(langSwitch.isSecondaryLanguageOn()) {
-        document.getElementById('cv_link').setAttribute("href", "/resources/cv-updated-gen-2021-en.pdf");
+        document.getElementById('cv_link').setAttribute("href", "/resources/cv-en.pdf");
     } else if (langSwitch.isMainLanguageOn()) {
-        document.getElementById('cv_link').setAttribute("href", "/resources/cv-aggiornato-feb-22-it.pdf");
+        document.getElementById('cv_link').setAttribute("href", "/resources/cv-en.pdf");
     }
 })
 
