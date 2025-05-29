@@ -212,7 +212,7 @@ document.getElementById("lang-switch").addEventListener("click", () => {
     if(langSwitch.isSecondaryLanguageOn()) {
         document.getElementById('cv_link').setAttribute("href", "/resources/cv-en.pdf");
     } else if (langSwitch.isMainLanguageOn()) {
-        document.getElementById('cv_link').setAttribute("href", "/resources/cv-en.pdf");
+        document.getElementById('cv_link').setAttribute("href", "/resources/cv-it.pdf");
     }
 })
 
