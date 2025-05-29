@@ -210,9 +210,9 @@ getCurrentAge();
 document.getElementById("lang-switch").addEventListener("click", () => {
     getCurrentAge();
     if(langSwitch.isSecondaryLanguageOn()) {
-        document.getElementById('cv_link').setAttribute("href", "/resources/cv-en.pdf");
+        document.getElementById('cv_link').setAttribute("href", "/resources/cv_en.pdf");
     } else if (langSwitch.isMainLanguageOn()) {
-        document.getElementById('cv_link').setAttribute("href", "/resources/cv-it.pdf");
+        document.getElementById('cv_link').setAttribute("href", "/resources/cv_it.pdf");
     }
 })
 
