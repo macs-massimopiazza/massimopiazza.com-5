@@ -752,6 +752,14 @@ footer {
     .footer-wrapper {
         justify-content: center;
     }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-links #last-update {
+        display: block;
+    }
 }
 
 /* background stars */

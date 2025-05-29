@@ -11,6 +11,13 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
     
+    - name: Set current date as env variable
+      run: echo "CURRENT_DATE=$(date '+%d %B %Y')" >> $GITHUB_ENV
+    
+    - name: Replace placeholder in index.html
+      run: |
+        sed -i "s/{{LAST_UPDATE}}/last update: $CURRENT_DATE/" index.html
+    
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:

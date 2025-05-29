@@ -437,3 +437,9 @@ pageArrowLeft.addEventListener("click", function() {
             break;
     }
 })
+
+// Set last update text
+const el = document.getElementById('last-update');
+    if (el.textContent.includes('LAST_UPDATE')) {
+    el.style.display = 'none';
+}
