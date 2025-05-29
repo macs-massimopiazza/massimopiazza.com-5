@@ -16,7 +16,7 @@ jobs:
     
     - name: Replace placeholder in index.html
       run: |
-        sed -i "s/{{LAST_UPDATE}}/last update: $CURRENT_DATE/" index.html
+        sed -i "s/{{LAST_UPDATE}}/$CURRENT_DATE/" index.html
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
