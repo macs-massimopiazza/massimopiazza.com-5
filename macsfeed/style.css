@@ -1,0 +1,79 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.feed-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 3px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #ddd;
+    color: #333;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.feed-badge.selected {
+    background-color: #333;
+    color: #fff;
+}
+
+.feed-section {
+    margin-top: 20px;
+}
+
+.article-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.article-list small.source {
+    display: inline-block;
+    background-color: #454545;
+    color: #dadada;
+    font-size: 0.75em;
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin-left: 6px;
+    vertical-align: middle;
+    font-family: 'Verdana', sans-serif;
+}
+
+.article-list li {
+    margin-bottom: 15px;
+}
+
+/* Stile link "Notion-like" */
+.article-list a {
+    text-decoration: none;        /* niente sottolineatura di default */
+    color: #ce4308;               /* blu soft, simile a Notion */
+    transition: all 0.2s ease;    /* transizione morbida per hover */
+    border-bottom: 1px dotted transparent; /* effetto "sottile" hover */
+}
+
+.article-list a:hover {
+    border-bottom: 1px dotted #1a73e8; /* sottolineatura puntinata al passaggio */
+    color: #174ea6;                     /* blu più scuro al passaggio */
+}
+
+.feed-admin {
+    margin-top: 30px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.feed-admin input, .feed-admin button {
+    padding: 6px 10px;
+    margin-right: 5px;
+}

@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Feed1",
+        "url": "https:\/\/techcrunch.com\/feed\/",
+        "categories": []
+    },
+    {
+        "name": "Feed",
+        "url": "https:\/\/www.bmwblog.com\/feed",
+        "categories": []
+    }
+]
